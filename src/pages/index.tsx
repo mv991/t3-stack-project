@@ -17,8 +17,8 @@ const Home: NextPage = () => {
        
        <div className="flex-start items-center justify-center">
       
-      {session ? <Link href = {"/CreateBlog"}><h3 className="display:block text-center">Create Blog</h3></Link>:<Link href = {"/signup"}><h3 className = "display:block text-center">Create a New Account  </h3></Link> }
-      {session? <Link href={"/ProfilePage"}><h3 className="display:block text-center">Profile Page</h3></Link>:""}
+      {session ? <Link href = {"CreateBlog"}><h3 className="display:block text-center">Create Blog</h3></Link>:<Link href = {"/signup"}><h3 className = "display:block text-center">Create a New Account  </h3></Link> }
+      {session? <Link href={"ProfilePage"}><h3 className="display:block text-center">Profile Page</h3></Link>:""}
       </div>
       <DisplayBlogs/>
       

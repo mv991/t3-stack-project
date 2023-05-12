@@ -1,8 +1,9 @@
 
 import { useState } from 'react';
 import { api } from "~/utils/api";
-
+import { useRouter } from 'next/router';
 export default function SignUp() {
+  const router = useRouter()
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   // const router = useRouter();
@@ -11,6 +12,7 @@ export default function SignUp() {
       console.log("email1",email, "password1",password)
       setEmail("");
        setPassword("")
+       router.push('/')
     }
   })
   const handleSubmit =  (e: React.FormEvent<HTMLFormElement>) => {
